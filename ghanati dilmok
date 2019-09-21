@@ -1,0 +1,15 @@
+iptables -t mangle -A POSTROUTING -p  -t nat -d 10.1.10.1 --dport 137582 / --dnat -s 192.168.1.12 -j ACCEPT
+iptables -t mangle -A POSTROUTING -p  -t nat -d 10.1.10.2:10.1.10.255 --dport 137582 / --dnat  10.1.10.1:10.1.10.255 -j ACCEPT
+iptables -t mangle -A POSTROUTING -p  -t nat -d 10.1.10.2:10.1.10.255 --dport 137582 / --dnat  10.1.10.3:10.1.10.255 -j ACCEPT
+iptables -t mangle -A POSTROUTING -p  -t nat -d 10.1.10.3:10.1.10.255 --dport 137582 / --dnat  10.1.10.4:10.1.10.255 -j ACCEPT
+iptables -A 
+
+iptables -A INPUT -i lo -j ACCEPT 
+iptables -A INPUT -i lo ! -s 127.0.0.1 -j DROP
+iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
+iptables -A OUTPUT -p icmp --icmp-type echo-reply -j DROP
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A INPUT -m state --state INVALID -j DROP 
+iptables -A INPUT -
+
+iptables -A INPUT -p tcp --dport 4444 ! -s 127.0.0.1 -j DROP 

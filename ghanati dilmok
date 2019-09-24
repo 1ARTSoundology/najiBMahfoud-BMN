@@ -9,3 +9,7 @@ iptables -A OUTPUT -p icmp --icmp-type echo-reply -j DROP
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A INPUT -m state --state INVALID -j DROP 
 iptables -A INPUT -p tcp --dport 4444 ! -s 127.0.0.1 -j DROP 
+iptables -A INPUT -p tcp --syn   --dst http  -m iplimit --iplimit-mask  8 --iplimit-above   4 -j REJECT 
+iptables -A INPUT -m ipv4options --rr -j DROP
+iptables -A INPUT -m ipv4options --tt -j DROP 
+iptables -A INPUT -p tcp -m tcp-flags --tcp-flags SYN,FIN ALL -j DROP 

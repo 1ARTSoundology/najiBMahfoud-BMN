@@ -24,6 +24,7 @@ pkg install -f wget
 wget https://raw.githubusercontent.com/Hax4us/Nethunter-In-Termux/master/kalinethunter
 chmod +x kalinethunter
 bash kalinethunter
+startkali
 apt -o Aquire:Http:RedirecteAllow=false install curl wget  build-essential binwalk python3.8 python-pip man  git   adb fastboot apktool   debsums integrit
 
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \

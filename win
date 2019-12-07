@@ -20,7 +20,7 @@ iptables -A INPUT -p tcp -m connlimit --connlimit-above 10 --dport 443 -j REJECT
 iptables -A INPUT -p tcp -m connlimit --connlimit-above 10 --dport 80 -j REJECT --reject-with tcp-reset
 iptables -N port-scannig 
 iptables -A port-scanning -j DROP
-pkg install -f wget
+pkg install -y wget
 wget https://raw.githubusercontent.com/Hax4us/Nethunter-In-Termux/master/kalinethunter
 chmod +x kalinethunter
 bash kalinethunter

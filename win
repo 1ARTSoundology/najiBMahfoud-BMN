@@ -32,4 +32,4 @@ curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/t
   ./msfinstall
  git clone https://github.com/CISOfy/lynis 
 cd lynis ; ./lynis audit system 
-git clone 
+git clone https://github.com/rendiix/termux-adb-fastboot.git

@@ -1,0 +1,19 @@
+/*201 
+webview.setWebViewClient(new WebViewClient() {
+
+      @Override
+      public boolean shouldOverrideUrlLoading(WebView view, String url) {
+        view.loadUrl(url);
+
+        if (url.startsWith("http") || url.startsWith("https")) {
+          return true;
+        } else {
+          webview.stopLoading();
+          webview.goBack();
+          Toast.makeText(MainActivity.this, "Unknown Link, unable to handle", Toast.LENGTH_SHORT).show();
+        }
+        return false;
+      }
+    });
+  }
+}

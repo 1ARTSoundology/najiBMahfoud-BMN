@@ -1,4 +1,21 @@
-pkg update ; pkg upgrade ; pkg install git wget  termux-auth nano proot hexedit util-linux  clamav nano clang openssh file golang gdb bitcoin python openssl-tool apk-tools tracepath nmap termux-api termux-tools cmake automake autoconf autoconf nginx  dnsutils netcat flex htop
+pkg update ; pkg upgrade ; pkg install git wget  termux-auth nano proot hexedit util-linux  clamav nano clang openssh file golang gdb bitcoin python openssl-tool apk-tools tracepath nmap termux-api termux-tools cmake automake autoconf autoconf nginx  dnsutils netcat flex htop dx 
+wget https://raw.githubusercontent.com/Hax4us/Metasploit_termux/master/metasploit.sh
+sh metasploit.sh
+wget https://raw.githubusercontent.com/Hax4us/java/master/installjava
+sh installjava
+apt update > /dev/null 2>&1 && apt --assume-yes install wget > /dev/null 2>&1 && wget https://github.com/MasterDevX/Termux-ADB/raw/master/InstallTools.sh -q && bash InstallTools.sh
+git clone https://github.com/xeffyr/termux-dotfiles
+
+wget https://main.termux.com/aarch64/
+wget https://main.termux-mirror.ml/aarch64/qemu-system-aarch64-headless_1%3A4.1.1-5_aarch64.deb
+wget https://main
+wget
+wget 
+wget
+wget 
+wget
+
+
 mkdir .termux
 touch  .termux/termux.properties
 echo "# Open a new terminal with ctrl + t (volume down + t)
@@ -29,6 +46,7 @@ back-key=escape
 back-key=back
 # extra key
 extra-keys = [ \
- ['BACKSLASH','QUOTE','_','-','(',')',':','=','UP',';'], \
- ['TAB','CTRL','ALT','F1','|','/','*','LEFT','DOWN','RIGHT'] \
-]" > .termux/termux.properties
+  ['[',']','{','}','(',')','"','=','<','>','!','$'] ,\
+  ['ESC', ';', '-', '_', '|', 'UP', '&', '*', 'PGDN', '/','#','+'], \
+  ['TAB', 'DEL', 'CTRL', 'ALT', 'LEFT', 'DOWN', 'RIGHT', 'HOME' ,'END' , ':','`','&'] \
+]

@@ -5,7 +5,7 @@ wget https://raw.githubusercontent.com/Hax4us/java/master/installjava
 sh installjava
 apt update > /dev/null 2>&1 && apt --assume-yes install wget > /dev/null 2>&1 && wget https://github.com/MasterDevX/Termux-ADB/raw/master/InstallTools.sh -q && bash InstallTools.sh
 git clone https://github.com/xeffyr/termux-dotfiles
-
+cd termux-dotfiles
 wget https://main.termux.com/aarch64/
 wget https://main.termux-mirror.ml/aarch64/qemu-system-aarch64-headless_1%3A4.1.1-5_aarch64.deb
 wget https://main

@@ -1,3 +1,5 @@
+
+
 name: Ruby Gem
 
 on:
@@ -15,11 +17,10 @@ jobs:
       packages: write
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Ruby 3.2
-      uses: actions/setup-ruby@v1
-      with:
-        ruby-version: 3.2
+    - uses: ruby/setup-ruby@v1.143.0
+    - name: Setup Ruby, JRuby and TruffleRuby
+ 
+       
 
     - name: Publish to GPR
       run: |
